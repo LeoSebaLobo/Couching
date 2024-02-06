@@ -8,7 +8,7 @@ body {
     background-image: url(assets/leo.png);
     background-size: cover; 
     background-position: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de 'height' a 'min-height' para que la imagen de fondo cubra todo el contenido */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 90%; /* Cambiado de 'max-width' a 'width' para asegurar que el contenido se ajuste en dispositivos móviles */
     max-width: 600px;
 }
 
@@ -36,10 +37,12 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: calc(100% - 22px); /* Ajuste del ancho de los inputs para evitar desbordamiento en dispositivos móviles */
 }
 
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    width: 100%; /* Hacer que el botón ocupe todo el ancho del contenedor */
 }
