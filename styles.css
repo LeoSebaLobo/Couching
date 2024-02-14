@@ -1,19 +1,17 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
-
-.container {
-    background-image: url(assets/leo.png);
-    background-size: cover; 
-    background-position: center;
-    min-height: 100vh; /* Cambiado de 'height' a 'min-height' para que la imagen de fondo cubra todo el contenido */
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+
 }
 
+/* Contenido de la página */
 .content {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -23,9 +21,32 @@ body {
     max-width: 600px;
 }
 
+/* Tarjetas */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Formulario */
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 label {
@@ -37,12 +58,161 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(100% - 22px); /* Ajuste del ancho de los inputs para evitar desbordamiento en dispositivos móviles */
+    width: calc(100% - 22px);
 }
 
 input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
-    width: 100%; /* Hacer que el botón ocupe todo el ancho del contenedor */
+    width: 100%;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        display: flex; /* Utilizamos flexbox para colocar las tarjetas en línea */
+        justify-content: space-around; /* Distribuye las tarjetas horizontalmente con espacio alrededor */
+        flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a una nueva línea si el espacio es insuficiente */
+    }
+
+    .card {
+        width: calc(30% - 20px); /* Ajusta el ancho de las tarjetas y considera el margen */
+        margin-bottom: 20px; /* Agrega margen inferior para separar las tarjetas */
+    }
+}
+/* Estilos para la nueva sección */
+.additional-section {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 40px; /* Espaciado interno */
+    text-align: center; /* Centrar contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.additional-section h2 {
+    margin-bottom: 20px; /* Espacio inferior para el título */
+}
+
+.icon-list {
+    padding: 0; /* Quita el espaciado interno de la lista */
+}
+
+.icon-list li {
+    margin-bottom: 20px; /* Espacio entre ítems */
+    list-style: none; /* Quita los estilos de la lista */
+}
+
+.icon-list li p {
+    margin-top: 10px; /* Espacio entre la imagen y el párrafo */
+}
+
+/* Estilos para la nueva sección */
+.additional-section {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 40px; /* Espaciado interno */
+    text-align: center; /* Centrar contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.additional-section h2 {
+    margin-bottom: 20px; /* Espacio inferior para el título */
+}
+
+.unordered-list {
+    list-style-type: none; /* Quita los estilos de la lista */
+    padding: 0; /* Quita el espaciado interno de la lista */
+}
+
+.unordered-list li {
+    margin-bottom: 20px; /* Espacio entre ítems */
+}
+
+.unordered-list li img {
+    display: inline-block; /* Hace que las imágenes se muestren en línea */
+    width: 50px; /* Ajusta el ancho de las imágenes */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+}
+
+.fuente {
+    font-size: 20px;
+}
+
+/* Estilos para la tarjeta centrada */
+.centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Margen superior para separar la tarjeta de la sección anterior */
+}
+
+.card {
+    width: calc(30% - 10px); /* Reducir el ancho de las tarjetas y ajustar el margen */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.card h3 {
+    margin-bottom: 10px; /* Espacio inferior para el título */
+}
+/* Estilos para la sección de información adicional */
+.additional-info {
+    text-align: center; /* Centrar contenido */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.additional-content {
+    width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+.additional-content h2 {
+    margin-bottom: 10px; /* Espacio inferior para el título */
+}
+
+/* Estilos para la tarjeta centrada */
+.centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Margen superior para separar la tarjeta de la sección anterior */
+}
+
+/* Estilos para la última tarjeta */
+.last-card {
+    background-color: #f9f9f9; /* Fondo de la tarjeta */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Centrar contenido */
+    width: 70%; /* Ancho de la tarjeta */
+    max-width: 800px; /* Ancho máximo de la tarjeta */
+    height: auto; /* Altura automática basada en el contenido */
+    margin: 0 auto; /* Centrar la tarjeta horizontalmente */
+}
+
+.profile-image {
+    width: 150px; /* Define el ancho deseado */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+    border-radius: 100%;
+
+}
+
+.profile-image2 {
+    width: 600px; /* Define el ancho deseado */
+    height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 3px solid black;
 }
